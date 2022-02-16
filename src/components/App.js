@@ -26,3 +26,10 @@ const App = () => {
 };
 
 export default App;
+
+/*
+1. Responsive
+2. Spinner
+3. when input field are empty show alert
+4. reset form after operation is completed
+*/

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import emailjs from "emailjs-com";
 import emailKey from "../key/emailKey";
-import TF from "./TF";
+import TF from "./TextField";
 
 const InputForm = () => {
   const [toEmail, setToEmail] = useState("");
@@ -20,7 +20,7 @@ const InputForm = () => {
       setToName("Ajinkya");
     }
   }, [toEmail]);
-
+ 
   const handleToEmailChange = (event) => {
     setToEmail(event.target.value);
   };
@@ -42,16 +42,17 @@ const InputForm = () => {
         event.target,
         emailKey.User_ID
       )
-      .then((response) => {
+      .then(() => {
         setEmailSent(true);
       })
       .catch((err) => console.log(err));
   };
 
+  
   return (
-    <div className="ui container">
-      <form className="ui form" onSubmit={onSubmit}>
-        {showJournalForm === true ? (
+    <div className="container">
+      <form className="form" onSubmit={onSubmit} >
+      {showJournalForm === true ? (
           <>
             <div className="field">
               <label>To:</label>
@@ -86,11 +87,10 @@ const InputForm = () => {
                 onChange={ChangeFromName}
               />
             </div>
-
+ 
             <div className="button-container">
-              {/* {!emailSent ? "Send" : "Sent"} */}
               {!emailSent ? (
-                <button className="left-button" size="large">
+                <button className="left-button" size="large" >
                   Send
                 </button>
               ) : (
@@ -98,8 +98,7 @@ const InputForm = () => {
                   Sent
                 </button>
               )}
-
-              {/* <RightButton /> */}
+              <br />
               <button
                 type="button"
                 className="right-button"
@@ -110,7 +109,7 @@ const InputForm = () => {
             </div>
           </>
         ) : (
-          <TF />
+        <TF toName={toName} fromName={fromName} toEmail={toEmail}/>
         )}
       </form>
     </div>
