@@ -20,7 +20,7 @@ const InputForm = () => {
       setToName("Ajinkya");
     }
   }, [toEmail]);
- 
+
   const handleToEmailChange = (event) => {
     setToEmail(event.target.value);
   };
@@ -48,11 +48,10 @@ const InputForm = () => {
       .catch((err) => console.log(err));
   };
 
-  
   return (
     <div className="form-container">
-      <form className="form" onSubmit={onSubmit} >
-      {showJournalForm === true ? (
+      <form className="form" onSubmit={onSubmit}>
+        {showJournalForm === true ? (
           <>
             <div className="field">
               <label>To:</label>
@@ -87,10 +86,10 @@ const InputForm = () => {
                 onChange={ChangeFromName}
               />
             </div>
- 
+
             <div className="button-container">
               {!emailSent ? (
-                <button className="left-button" size="large" >
+                <button className="left-button" size="large">
                   Send
                 </button>
               ) : (
@@ -109,7 +108,7 @@ const InputForm = () => {
             </div>
           </>
         ) : (
-        <TF toName={toName} fromName={fromName} toEmail={toEmail}/>
+          <TF toName={toName} fromName={fromName} toEmail={toEmail} />
         )}
       </form>
     </div>
