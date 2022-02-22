@@ -50,7 +50,7 @@ const InputForm = () => {
 
   
   return (
-    <div className="container">
+    <div className="form-container">
       <form className="form" onSubmit={onSubmit} >
       {showJournalForm === true ? (
           <>

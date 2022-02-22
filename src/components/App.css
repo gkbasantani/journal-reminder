@@ -67,7 +67,6 @@ input {
 
 .button-container {
   padding: 5px 2px 0 10px;
-  display: gird;
 }
 .left-button,
 .left-button-sent {
@@ -115,4 +114,44 @@ input {
 }
 .reason {
   margin-left: 190px;
+}
+
+@media screen and (max-width: 412px) {
+  .headerLogo {
+    width: 100%;
+    margin-left: 30px;
+  }
+  h1 {
+    font-size: 33px;
+  }
+  input {
+    width: 50%;
+  }
+  .form {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .left-button,
+  .left-button-sent {
+    margin-left: 0;
+    margin-right: 30px;
+    width: 100%;
+  }
+  .right-button {
+    width: 100%;
+    margin: 0 30px 0 0;
+  }
+  .button-container {
+    margin-right: 15px;
+  }
+  .girlImage {
+    width: 100%;
+    height: fit-content;
+  }
+  .reasonBox {
+    margin-left: 0px;
+    /* margin-right: 50px; */
+    width: 350px;
+    height: 120px;
+  }
 }

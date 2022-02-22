@@ -32,4 +32,7 @@ export default App;
 2. Spinner
 3. when input field are empty show alert
 4. reset form after operation is completed
+5. back button
+6. Havent written the journal button
+7. Reason text field automatically next line
 */
